@@ -1,13 +1,16 @@
+import path from 'path'
 import { defineConfig } from 'vite'
 import Unocss from 'unocss/vite'
 import transformWeClass from 'unplugin-transform-we-class/vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     uni(),
+
     // ------------Unocss-----------
     // 使用weapp预设https://github.com/MellowCo/unocss-preset-weapp
     //
@@ -22,6 +25,7 @@ export default defineConfig({
     transformWeClass(),
     // ------------Unocss-----------
 
+    // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
         'vue',
@@ -35,6 +39,13 @@ export default defineConfig({
       ],
       dts: 'src/auto-imports.d.ts',
       vueTemplate: true,
+    }),
+
+    // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [path.resolve(__dirname, 'locales/**')],
     }),
   ],
 })

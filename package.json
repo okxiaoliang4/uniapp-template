@@ -57,6 +57,8 @@
     "@dcloudio/uni-automator": "3.0.0-alpha-3050420220804008",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3050420220804008",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3050420220804008",
+    "@intlify/vite-plugin-vue-i18n": "^6.0.1",
+    "@types/node": "^18.7.11",
     "eslint": "^8.22.0",
     "typescript": "^4.7.4",
     "unocss": "^0.45.12",
