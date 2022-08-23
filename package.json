@@ -45,6 +45,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3050420220804008",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3050420220804008",
     "axios": "^0.27.2",
+    "axios-retry": "^3.3.1",
     "pinia": "^2.0.20",
     "vue": "^3.2.37",
     "vue-i18n": "^9.1.9"
