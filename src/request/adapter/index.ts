@@ -3,7 +3,6 @@ import axios from 'axios'
 
 export function axiosUniAdapter(config: AxiosRequestConfig) {
   return new Promise<AxiosResponse>((resolve, reject) => {
-
     let task: UniApp.RequestTask | null = uni.request({
       url: axios.getUri(config),
       header: config.headers,

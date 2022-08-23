@@ -1,4 +1,4 @@
-import { AxiosRequestConfig } from 'axios'
+import type { AxiosRequestConfig } from 'axios'
 import $axios from '..'
 
 export const createGetRequest = <T = any>(url: string): (config?: AxiosRequestConfig) => Promise<T> => (config?: AxiosRequestConfig) => $axios.get(url, config)
