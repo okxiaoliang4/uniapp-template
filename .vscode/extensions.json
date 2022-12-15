@@ -2,7 +2,11 @@
   "recommendations": [
     "vue.volar",
     "antfu.unocss",
-    "modyqyw.vscode-uni-app-snippets",
-    "ModyQyW.vscode-uni-app-schemas"
+    "github.copilot",
+    "uni-helper.uni-app-schemas-vscode",
+    "uni-helper.uni-app-snippets-vscode",
+    "uni-helper.uni-cloud-snippets-vscode",
+    "uni-helper.uni-helper-vscode",
+    "uni-helper.uni-ui-snippets-vscode"
   ]
 }
