@@ -2,11 +2,11 @@
  * define the resource schema
  */
 
-import enUS from '@/locales/en.json'
+import enUS from '@/locales/en-US.json'
 import zhCN from '@/locales/zh-CN.json'
 
 // define message schema as master mesage schema
-export type MessageSchema = typeof enUS
+export type MessageSchema = typeof enUS | typeof zhCN
 
 declare module 'vue-i18n' {
   // define the locale messages schema

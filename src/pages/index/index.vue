@@ -5,7 +5,7 @@ const { t, locale } = useI18n()
 
 const toggle = useToggle(locale, {
   truthyValue: 'zh-CN',
-  falsyValue: 'en',
+  falsyValue: 'en-US',
 })
 </script>
 
