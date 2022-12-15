@@ -7,7 +7,7 @@ import zhCN from '../locales/zh-CN.json'
 export const install = (app: App) => {
   const i18n = createI18n({
     legacy: false,
-    locale: 'en',
+    locale: 'en-US',
     messages: {
       'en-US': enUS,
       'zh-CN': zhCN,
