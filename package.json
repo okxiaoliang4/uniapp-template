@@ -31,7 +31,20 @@
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
+    "lint:fix": "eslint ./src --fix",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{jsx,txs,ts,js,json,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-3061320221209001",
@@ -56,6 +69,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.26.1",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@dcloudio/types": "^3.0.13",
     "@dcloudio/uni-automator": "3.0.0-3061320221209001",
     "@dcloudio/uni-cli-shared": "3.0.0-3061320221209001",
@@ -63,6 +78,8 @@
     "@intlify/vite-plugin-vue-i18n": "^6.0.1",
     "@types/node": "^18.11.11",
     "eslint": "^8.22.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
     "typescript": "^4.7.4",
     "unocss": "0.46.4",
     "unocss-preset-weapp": "^0.2.4",
