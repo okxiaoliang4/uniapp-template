@@ -7,6 +7,7 @@
     "uni-helper.uni-app-snippets-vscode",
     "uni-helper.uni-cloud-snippets-vscode",
     "uni-helper.uni-helper-vscode",
-    "uni-helper.uni-ui-snippets-vscode"
+    "uni-helper.uni-ui-snippets-vscode",
+    "dbaeumer.vscode-eslint"
   ]
 }
