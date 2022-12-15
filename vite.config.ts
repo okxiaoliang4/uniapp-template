@@ -1,7 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import Unocss from 'unocss/vite'
-import transformWeClass from 'unplugin-transform-we-class/vite'
+import transformClass from 'unplugin-transform-class/vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
@@ -27,7 +27,7 @@ export default defineConfig({
     process.env.UNI_COMPILER !== 'nvue' ? Unocss() : undefined,
 
     // https://github.com/MellowCo/unplugin-transform-we-class
-    transformWeClass(),
+    transformClass(),
     // ------------Unocss-----------
 
     // https://github.com/antfu/unplugin-auto-import
