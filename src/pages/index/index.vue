@@ -1,14 +1,32 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
+
+const toggle = useToggle(locale, {
+  truthyValue: 'zh-CN',
+  falsyValue: 'en',
+})
 </script>
 
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
+    <image
+      class="logo"
+      src="/static/logo.png"
+    />
+    <view class="flex items-center">
+      lang: {{ $i18n.locale }}
+      <button
+        class="ml-20rpx"
+        @click="toggle()"
+      >
+        toggle
+      </button>
+    </view>
+    <view class="mt-20rpx text-area">
       <text class="title text-red! text-64rpx!">
-        {{ title }}
+        {{ t('hello') }}
       </text>
     </view>
   </view>

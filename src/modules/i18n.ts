@@ -1,22 +1,17 @@
 import type { App } from 'vue'
 import { createI18n } from 'vue-i18n'
 
-// Import i18n resources
-// https://vitejs.dev/guide/features.html#glob-import
-const messages = Object.fromEntries(
-  Object.entries(
-    import.meta.globEager('../../locales/*.y(a)?ml'))
-    .map(([key, value]) => {
-      const yaml = key.endsWith('.yaml')
-      return [key.slice(14, yaml ? -5 : -4), value.default]
-    }),
-)
+import enUS from '../locales/en.json'
+import zhCN from '../locales/zh-CN.json'
 
 export const install = (app: App) => {
   const i18n = createI18n({
     legacy: false,
     locale: 'en',
-    messages,
+    messages: {
+      'en-US': enUS,
+      'zh-CN': zhCN,
+    },
   })
 
   app.use(i18n)
