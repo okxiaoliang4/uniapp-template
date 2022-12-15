@@ -16,7 +16,7 @@ const toggle = useToggle(locale, {
       src="/static/logo.png"
     />
     <view class="flex items-center">
-      lang: {{ $i18n.locale }}
+      lang: {{ locale }}
       <button
         class="ml-20rpx"
         @click="toggle()"
