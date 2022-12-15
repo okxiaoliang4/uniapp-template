@@ -1,17 +1,18 @@
 import { defineConfig, transformerDirectives } from 'unocss'
 import presetWeapp from 'unocss-preset-weapp'
+import { transformerClass } from 'unocss-preset-weapp/transformer'
 
 export default defineConfig({
   presets: [
     // https://github.com/MellowCo/unocss-preset-weapp
-    presetWeapp(),
-  ],
-  shortcuts: [
-    {
-      center: 'flex justify-center items-center',
-    },
+    presetWeapp({
+      whRpx: true,
+    }),
   ],
   transformers: [
     transformerDirectives({}),
+
+    // https://github.com/MellowCo/unocss-preset-weapp/tree/main/src/transformer/transformerClass
+    transformerClass(),
   ],
 })
