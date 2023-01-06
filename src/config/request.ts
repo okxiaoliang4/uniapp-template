@@ -4,5 +4,5 @@ import { axiosUniAdapter } from '../request/adapter'
 export const requestConfig: AxiosRequestConfig = {
   baseURL: 'https://api.xxx.com',
   adapter: axiosUniAdapter,
-  timeout: 3000,
+  timeout: 30000,
 }
