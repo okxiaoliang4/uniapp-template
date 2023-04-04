@@ -8,6 +8,10 @@
     "uni-helper.uni-cloud-snippets-vscode",
     "uni-helper.uni-helper-vscode",
     "uni-helper.uni-ui-snippets-vscode",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "lokalise.i18n-ally"
   ]
 }
