@@ -6,3 +6,10 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+interface ImportMetaEnv {
+  /**
+   * Api Base URL for the application.
+   */
+  VITE_API_BASE?: string
+}
