@@ -15,7 +15,8 @@
       "dom"
     ],
     "types": [
-      "@dcloudio/types"
+      "@dcloudio/types",
+      "@intlify/unplugin-vue-i18n/messages"
     ],
     "paths": {
       "@/*": [

@@ -4,7 +4,8 @@ import Unocss from 'unocss/vite'
 import transformClass from 'unplugin-transform-class/vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
+import Components from 'unplugin-vue-components/vite'
+import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,8 +15,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    uni(),
-
     // ------------Unocss-----------
     // 使用weapp预设https://github.com/MellowCo/unocss-preset-weapp
     //
@@ -29,6 +28,14 @@ export default defineConfig({
     // https://github.com/MellowCo/unplugin-transform-we-class
     transformClass(),
     // ------------Unocss-----------
+
+    // https://github.com/antfu/unplugin-vue-components
+    Components({
+      dts: 'src/components.d.ts',
+      dirs: ['src/components'],
+      types: [],
+      allowOverrides: true,
+    }),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
@@ -46,11 +53,13 @@ export default defineConfig({
       vueTemplate: true,
     }),
 
-    // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+    // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
     VueI18n({
       runtimeOnly: true,
       compositionOnly: true,
       include: [path.resolve(__dirname, 'locales/**')],
     }),
+
+    uni(),
   ],
 })
