@@ -1,8 +1,8 @@
 import type { AxiosRequestConfig } from 'axios'
-import { axiosUniAdapter } from '../request/adapter'
+import adapter from '@uni-helper/axios-adapter'
 
 export const requestConfig: AxiosRequestConfig = {
   baseURL: import.meta.env.VITE_API_BASE,
-  adapter: axiosUniAdapter,
+  adapter: adapter.createUniAppAxiosAdapter(),
   timeout: 30000,
 }

@@ -60,6 +60,7 @@
     "@dcloudio/uni-mp-toutiao": "3.0.0-alpha-3090220231010001",
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3090220231010001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3090220231010001",
+    "@uni-helper/axios-adapter": "^1.5.1",
     "@vueuse/core": "^9.13.0",
     "@vueuse/shared": "^9.13.0",
     "axios": "^1.5.1",
