@@ -1,16 +1,23 @@
 {
-  "pages": [ // pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+  "pages": [
     {
       "path": "pages/index/index",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
+      "type": "home"
+    },
+    {
+      "path": "pages/mine/index",
+      "type": "page"
     }
   ],
-  "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
-  }
+  "subPackages": [
+    {
+      "root": "pkg_a",
+      "pages": [
+        {
+          "path": "index/index",
+          "type": "page"
+        }
+      ]
+    }
+  ]
 }

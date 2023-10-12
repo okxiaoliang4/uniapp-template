@@ -6,6 +6,9 @@ import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
+import UniHelperPages from '@uni-helper/vite-plugin-uni-pages'
+import UniHelperLayouts from '@uni-helper/vite-plugin-uni-layouts'
+import UniHelperComponents from '@uni-helper/vite-plugin-uni-components'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,12 +32,19 @@ export default defineConfig({
     transformClass(),
     // ------------Unocss-----------
 
-    // https://github.com/antfu/unplugin-vue-components
-    Components({
+    // https://github.com/uni-helper/vite-plugin-uni-pages
+    UniHelperPages({
+      dts: 'src/uni-pages.d.ts',
+      subPackages: [
+        './src/pkg_a'
+      ]
+    }),
+    // https://github.com/uni-helper/vite-plugin-uni-layouts
+    UniHelperLayouts(),
+    // https://github.com/uni-helper/vite-plugin-uni-components
+    UniHelperComponents({
       dts: 'src/components.d.ts',
-      dirs: ['src/components'],
-      types: [],
-      allowOverrides: true,
+      directoryAsNamespace: true,
     }),
 
     // https://github.com/antfu/unplugin-auto-import
