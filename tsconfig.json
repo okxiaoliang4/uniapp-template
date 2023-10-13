@@ -16,6 +16,7 @@
     ],
     "types": [
       "@dcloudio/types",
+      "@uni-helper/uni-app-types",
       "@intlify/unplugin-vue-i18n/messages"
     ],
     "paths": {
@@ -30,5 +31,8 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue"
-  ]
+  ],
+  "vueCompilerOptions": {
+    "nativeTags": ["block", "component", "template", "slot"]
+  }
 }
